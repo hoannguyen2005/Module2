@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let maxAttempts = 3;
+let attempts = 0;
+let randomNumber;
+
+function playGame() {
+  // Nhập khoảng đoán của người dùng
+  let range = prompt("Nhập khoảng đoán (ví dụ: 1-100): ");
+  let [min, max] = range.split("-").map(Number);
+
+  // Chọn số ngẫu nhiên trong khoảng
+  randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+  // Bắt đầu vòng lặp chơi
+  while (attempts < maxAttempts) {
+    let userGuess = prompt(`Đoán số giữa ${min} và ${max}: `);
+    userGuess = Number(userGuess);
+
+    if (userGuess === randomNumber) {
+      alert("Chúc mừng! Bạn đã đoán đúng!");
+      break;
+    } else if (userGuess > randomNumber) {
+      alert("Đoán của bạn quá cao!");
+    } else {
+      alert("Đoán của bạn quá thấp!");
+    }
+
+    attempts++;
+  }
+
+  if (attempts === maxAttempts) {
+    alert("Bạn đã hết lượt chơi! Số đúng là " + randomNumber);
+  }
+}
+
+// Thêm sự kiện cho nút "Chơi"
+document.getElementById("play-button").addEventListener("click", playGame);
+    </script>
+</body>
+</html>

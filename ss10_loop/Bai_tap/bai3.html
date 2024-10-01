@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Hàm tạo dãy Fibonacci
+function fibonacci(n) {
+  let t1 = 0;
+  let t2 = 1;
+  let dãy = [t1, t2];
+  for (let i = 2; i < n; i++) {
+    let nextTerm = t1 + t2;
+    dãy.push(nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+  }
+  return dãy;
+}
+
+// Hiển thị 20 số đầu tiên trong dãy Fibonacci
+let dayFibonacci = fibonacci(20);
+for (let i = 0; i < dayFibonacci.length; i++) {
+  console.log(`Số thứ ${i + 1} trong dãy Fibonacci là: ${dãyFibonacci[i]}`);
+}
+    </script>
+</body>
+</html>
