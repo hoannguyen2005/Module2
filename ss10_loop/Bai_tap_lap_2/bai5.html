@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let soTienBanDau = +prompt("Nhập số tiền ban đầu");
+        let soThangChoVay = +prompt("Nhập số tháng cho vay");
+        let laiSuatHangThang = +prompt("Lãi suất hàng tháng");
+        
+        function tinhLaiNganHang(soTienBanDau, soThangChoVay, laiSuatHangThang) {
+            let tongSoTien = soTienBanDau;
+            for (let i = 0; i < soThangChoVay; i++) {
+                tongSoTien = tongSoTien + (tongSoTien * laiSuatHangThang / 100);
+            }
+            return tongSoTien;
+        }
+        
+        let ketQua = tinhLaiNganHang(soTienBanDau, soThangChoVay, laiSuatHangThang);
+        alert(`Tổng số tiền sau ${soThangChoVay} tháng là: ${ketQua} VND`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // in ra 20 số nguyên tó (20 nguyên tố dầu tiên trong dãy số tự nhiên)
+        // N: 0,1,2,3,4,5,6,7,8,...n
+        // SNT : sô tujwk nhiên là hơn 1 và chỉ chia hết cho 1 và chính nó => 2,3,7,1,,13,17,23...
+        //  B1 : kiểm ta 1 số tự nhiên bất kỳ có phải là số NT không
+        // B2: in ra 20 số nguyên tố trong dãy số tự nhiên (snt <20)=> n
+
+        let number =1;
+        let countSNT = 0;// đếm  số lượng số nguyên tó
+        while(countSNT<20){
+            let count =0;
+            for(let i = 2 ; i <= Math.sqrt(number);i++ ){
+                if(number % i ==0 ){
+                    count++;
+                }
+            }
+        }
+
+
+
+
+
+        let i = +prompt("Nhập số tự nhiên bất kỳ" );
+        // KIểm tra i có phải là số nguyên tố không
+        // Kiểm tra xem i%1 , i%2 ,...i%i => số lần chia hết =2 +. i là số nguyên tố
+       let count =0;
+        for (let i =2 ; i<=n ; i++){
+            if(n%i==0){
+                count++;
+            }
+        }
+        alert(count);
+        if (count==0){
+            alert("snt")
+        }
+        else{
+            alert("khong phải là snt")
+        }
+
+    </script>
+</body>
+</html>
