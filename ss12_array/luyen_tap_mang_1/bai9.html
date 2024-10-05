@@ -9,17 +9,10 @@
 
 <body>
     <script>
-        let a = new Array(10);
-        let b = new Array(10);
-
-        for (let i = 0; i < 10; i++) {
-            a[i] = Math.floor(Math.random() * 100); // sinh số nguyên ngẫu nhiên giữa 0 và 99
-            b[i] = Math.floor(Math.random() * 100); // sinh số nguyên ngẫu nhiên giữa 0 và 99
-        }
-
-        let c = a.concat(b);
-
-        console.log(`Mảng c: ${c}`);
+        let numberA = prompt("Nhập vào dãy số A có 10 chữ số :").split(",").map(Number);
+        let numberB = prompt("Nhập vào dãy số B có 10 chữ số :").split(",").map(Number);
+        let numberC = numberA.concat(numberB);
+        console.log(`dãy số được gộp từ A và B là: ${numberC}`);
     </script>
 </body>
 

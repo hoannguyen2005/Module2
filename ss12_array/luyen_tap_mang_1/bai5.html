@@ -9,17 +9,14 @@
 
 <body>
     <script>
-        let str = "1 2 -3 4 -5 6 -7 8 9 -10";
-
-        let count = 0;
-
-        str.split(" ").forEach(num => {
-            if (parseInt(num) < 0) {
-                count++;
+        let arr = [-1, -2, 3, 4, -11, -22, 33, 44, 5, 55];
+        dem =0;
+        for (let i = 0; i <arr.length; i++) {
+            if(arr[i]<0){
+                dem++;
             }
-        });
-
-        console.log(`Có ${count} số nguyên âm trong chuỗi`);
+        }
+        document.write(`có ${dem} số âm`);
     </script>
 </body>
 

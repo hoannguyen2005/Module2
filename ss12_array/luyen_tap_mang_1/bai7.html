@@ -9,25 +9,14 @@
 
 <body>
     <script>
-        let arr = new Array(10);
-
-        for (let i = 0; i < 10; i++) {
-            arr[i] = Math.floor(Math.random() * 100); // sinh số nguyên ngẫu nhiên giữa 0 và 99
+         let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let V = +prompt("Nhập v:");
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] === V) {
+                number.splice(i, 1);
+            }
         }
-
-        let V = 50;
-
-        let index = arr.indexOf(V);
-
-        if (index !== -1) {
-            arr.splice(index, 1);
-            arr.push(0);
-            console.log("V has been removed from the array");
-        } else {
-            console.log("V is not in the array");
-        }
-
-        console.log(`Mảng sau khi xoá V: ${arr}`);
+        console.log(number);
     </script>
 </body>
 
