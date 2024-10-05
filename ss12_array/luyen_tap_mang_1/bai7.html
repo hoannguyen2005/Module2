@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = new Array(10);
+
+        for (let i = 0; i < 10; i++) {
+            arr[i] = Math.floor(Math.random() * 100); // sinh số nguyên ngẫu nhiên giữa 0 và 99
+        }
+
+        let V = 50;
+
+        let index = arr.indexOf(V);
+
+        if (index !== -1) {
+            arr.splice(index, 1);
+            arr.push(0);
+            console.log("V has been removed from the array");
+        } else {
+            console.log("V is not in the array");
+        }
+
+        console.log(`Mảng sau khi xoá V: ${arr}`);
+    </script>
+</body>
+
+</html>
